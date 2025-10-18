@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => '',
+        'name' => 'db_semana_da_computacao',
         'username' => 'root',
         'password' => '',
         'connection' => 'mysql:host=127.0.0.1',

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>My Simple Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Simple Page</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>About Us</h2>
-        <p>This is a simple HTML page.</p>
-    </main>
-    <footer>
-        <p>&copy; 2023 My Simple Page</p>
-    </footer>
+    <div class="container">
+        <form action="" method="post" class="formulario">
+            <div class="caixaInput">
+                <div class="containerInput"><input type="text" name="name" id="" class="input"></div>
+                <div class="containerInput"><input type="email" name="email" class="input"></div>
+            </div>
+            <div class="caixaInput"></div>
+            <div class="caixaInput"></div>
+            <div class="caixaInput"></div>
+            <div class="caixaInput"></div>
+        </form>
+    </div>
 </body>
 </html>
