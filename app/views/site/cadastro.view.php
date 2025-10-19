@@ -14,18 +14,18 @@
             <h2>Bem-vindo! Faça seu cadastro em nosso sistema</h2>
             <img src="" alt="Macacode">
         </div>
-        <form class="formulario" action="" method="POST">   
+        <form id="form" class="formulario" action="/cadastro" method="POST" enctype="multipart/form-data">   
                 <div class="titulo">
                     <h3>Cadastro</h3>
                 </div>
 
                 <div class="linhaInput">
                     <div class="containerInput">
-                        <input type="text" name="name" id="" class="input" required>
+                        <input type="text" name="nome" id="" class="input" required>
                         <label class="labelLine">Digite seu nome</label>
                     </div>
                     <div class="containerInput">
-                        <input type="date" class="input" required>
+                        <input type="date" name="data_nascimento" class="input" required>
                     </div>
                 </div>
 
@@ -35,33 +35,33 @@
                         <label class="labelLine">Digite seu email</label>
                     </div>
                     <div class="containerInput">
-                        <input type="text" class="input" required>
+                        <input type="text" name="telefone" class="input" required>
                         <label class="labelLine">Digite seu telefone</div>
                     </div>
                 </div>
 
                 <div class="linhaInput">
                     <div class="containerInput">
-                        <input type="text" class="input" required>
+                        <input type="text" name="cpf" class="input" required>
                         <label class="labelLine">Insira seu cpf</label>
                     </div>
                     
                     <div class="containerInput">
-                        <input type="text" class="input" required>
+                        <input type="text" name="rg" class="input" required>
                         <label class="labelLine">Digite seu RG</label>
                     </div>
                 </div>
 
                 <div class="linhaInput wideInput">
                     <div class="containerInput wideInput">
-                        <textarea  id="textarea" required></textarea>
+                        <textarea  id="textarea" name="descricao" required></textarea>
                         <label class="labelLine">Insira a descrição</label>
                     </div>
                 </div>
 
                 <div class="linhaInput">
                     <div class="containerInput">
-                        <input type="password" class="inputSenha" id="inputSenha" required>
+                        <input type="password" name="senha" class="inputSenha" id="inputSenha" required>
                         <label class="labelLine">Digite sua senha</label>
                         <i class="bi bi-eye" id="olhoSenha" onclick="mostrarSenha('olhoSenha', 'inputSenha')"></i>
                     </div>
