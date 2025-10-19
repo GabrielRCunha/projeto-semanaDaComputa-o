@@ -8,16 +8,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container{
     width: 90%;
-    /* height: fit-content; */
     background-color: #E8DBDB;
     border-radius: 8px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     display: flex;
+    overflow: hidden;
 }
 
 .apresentacao{
@@ -54,14 +54,14 @@ form{
     width: 100%;
     padding: 1rem 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     gap:2rem;
 }
 
 .containerInput{
     position: relative;
-    width: 45%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +72,7 @@ form{
     width: 100%;
 }
 
-.input{
+.input, .inputSenha, #textarea {
     width: 100%;
     padding: 0.8rem 0.5rem;
     border: 2px solid #632972;
@@ -88,8 +88,8 @@ form{
 .inputSenha:valid + .labelLine,
 .containerInput input[type="date"]:valid + .labelLine 
 { /* Fix para campos date preenchidos */
-    transform: translateY(-28px) translateX(-5px); /* Move para cima */
-    font-size: 0.75rem;
+    transform: translateY(-32px) translateX(-5px); /* Move para cima */
+    font-size: 1rem;
     color: #632972;
     z-index: 10;
 }
@@ -97,8 +97,8 @@ form{
 #textarea:focus + .labelLine,
 #textarea:valid + .labelLine 
 {
-    transform: translateY(-28px) translateX(-5px); /* Mesma translação */
-    font-size: 0.75rem;
+    transform: translateY(-32px) translateX(-5px); /* Mesma translação */
+    font-size: 1rem;
     color: #632972;
     z-index: 10;
 }
@@ -112,39 +112,16 @@ form{
 .labelLine {
     position: absolute;
     top: 15px;
-    left: 80px;
+    left: 10px;
     color: #444;
     pointer-events: none;
     transition: 0.3s ease;
     padding: 0 5px;
-    transform: translateX(-80px);
+    transform: translateY(0);
 }
 
-#textarea{
-    width: 80%;
-    padding: 0.8rem 0.5rem;
-    border: 2px solid #632972;
-    border-top-left-radius: 10px;
-    background-color: transparent;
-    outline: none;
-    transition: 0.1s ease;
+#textarea {
     resize: none;
-}
-
-.inputSenha{
-    width: 100%;
-    padding: 0.8rem 0.5rem;
-    border: 2px solid #632972;
-    border-top-left-radius: 10px;
-    background-color: transparent;
-    outline: none;
-    transition: 0.1s ease;
-}
-
-.inputSenha:focus + .labelLine,
-.inputSenha:valid + .labelLine{
-    transform: translate(-95px , -40px);
-    z-index: 1111;
 }
 
 #olhoSenha, #olhoConfirma{
@@ -181,92 +158,3 @@ form{
     font-size: 12px;
     display: none;
 }
-
-
-
-
-
-/* 
-
-
-.caixaInput{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.caixaInputVertical{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.containerVertical{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.inputV{
-    width: 300px;
-    height: 50px;
-    border: 2px solid black;
-    border-top-left-radius: 10px;
-    background-color: rgba(248, 188, 194, 0.5);
-}
-
-.containerInputs{
-    width: 33.333%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    line-height: 200px;
-}
-
-
-
-
-
-
-.botaoSubmit{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-button{
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid black;
-    cursor: pointer;
-    margin-right: 50px;
-    background-color: #2ECC71;
-}
-
-.bi{
-    position: absolute;
-    transform: translateX(130px);
-    font-size: 24px;
-    cursor: pointer;
-}
-
-span{
-    color: red;
-    display: none;
-    justify-self: center;
-} */
