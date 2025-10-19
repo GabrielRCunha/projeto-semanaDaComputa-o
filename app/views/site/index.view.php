@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div class="container">
-        <form action="" method="post" class="formulario">
+        <form action="" method="post" class="formulario" id="form">
             <div class="caixaInput">
                 <div class="containerInput">
                     <input type="text" name="name" id="" class="input" required>
@@ -43,21 +44,23 @@
                 </div>
             </div>
             <div class="caixaInputVertical">
-                <div class="containerInput vertical">
-                    <input type="password" class="input" required>
-                    <div class="labelLine">Digite sua senha</div>
+                <div class="containerVertical">
+                    <input type="password" class="inputV" id="inputSenha" placeholder="Digite sua senha" required>
+                    <i class="bi bi-eye" id="olhoSenha" onclick="mostrarSenha('olhoSenha', 'inputSenha')"></i>
                 </div>
-                <div class="containerInput vertical">
+                <div class="containerVertical">
                     <div class="containerInput vertical">
-                    <input type="password" class="input" required>
-                    <div class="labelLine">Confirme sua senha</div>
+                    <input type="password" class="inputV" id="inputConfirma" placeholder="Confirme sua senha" required>
+                    <i class="bi bi-eye" id="olhoConfirma" onclick="mostrarSenha('olhoConfirma', 'inputConfirma')"></i>
                 </div>
                 </div>
             </div>
             <div class="botaoSubmit">
-                <button type="submit"> CONFIRMAR</button>
+                <span id="erroSenha" >A SENHA E SUA CONFIRMAÇÃO DEVEM SER IGUAIS</span>
+                <button type="submit" onclick="senhaIgual('form', 'inputSenha', 'inputConfirma', 'erroSenha', event)" > CONFIRMAR</button>
             </div>
         </form>
     </div>
 </body>
+<script src="/public/js/index.js"></script>
 </html>
