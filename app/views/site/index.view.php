@@ -3,64 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário Curso Semana Computação</title>
     <link rel="stylesheet" href="/public/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="container">
-        <form action="" method="post" class="formulario" id="form">
-            <div class="caixaInput">
-                <div class="containerInput">
-                    <input type="text" name="name" id="" class="input" required>
-                    <div class="labelLine">Digite seu nome</div>
+    <main class="container">
+        <div class="apresentacao">
+            <img src="" alt="Logo code">
+            <h2>Bem-vindo, faça seu cadastro em nosso sistema</h2>
+            <img src="" alt="Macacode">
+        </div>
+        <form class="formulario" action="" method="POST">   
+                <div class="titulo">
+                    <h3>Cadastro</h3>
                 </div>
-                <div class="containerInput">
-                    <input type="email" name="email" class="input" required>
-                    <div class="labelLine">Digite seu email</div>
+
+                <div class="linhaInput">
+                    <div class="containerInput">
+                        <input type="text" name="name" id="" class="input" required>
+                        <label class="labelLine">Digite seu nome</label>
+                    </div>
+                    <div class="containerInput">
+                        <input type="date" class="input">
+                    </div>
                 </div>
-            </div>
-            <div class="caixaInput">
-                <div class="containerInputs">
-                    <input type="date" class="input">
+
+                <div class="linhaInput">
+                    <div class="containerInput">
+                        <input type="email" name="email" class="input" required>
+                        <label class="labelLine">Digite seu email</label>
+                    </div>
+                    <div class="containerInput">
+                        <input type="text" class="input" required>
+                        <label class="labelLine">Digite seu telefone</div>
+                    </div>
                 </div>
-                <div class="containerInputs">
-                    <input type="text" class="input" required>
-                    <div class="labelLine">Insira a descrição</div>
+
+                <div class="linhaInput">
+                    <div class="containerInput">
+                        <input type="text" class="input" required>
+                        <label class="labelLine">Insira seu cpf</label>
+                    </div>
+                    
+                    <div class="containerInput">
+                        <input type="text" class="input" required>
+                        <label class="labelLine">Digite seu RG</label>
+                    </div>
                 </div>
-                <div class="containerInputs">
-                    <input type="text" class="input" required>
-                    <div class="labelLine">Insira seu cpf</div>
+
+                <div class="linhaInput wideInput">
+                    <div class="containerInput wideInput">
+                        <textarea  id="textarea" required></textarea>
+                        <label class="labelLine">Insira a descrição</label>
+                    </div>
                 </div>
-            </div>
-            <div class="caixaInput">
-                <div class="containerInput">
-                    <input type="text" class="input" required>
-                    <div class="labelLine">Digite seu telefone</div>
+
+                <div class="linhaInput">
+                    <div class="containerInput">
+                        <input type="password" class="inputSenha" id="inputSenha" required>
+                        <label class="labelLine">Digite sua senha</label>
+                        <i class="bi bi-eye" id="olhoSenha" onclick="mostrarSenha('olhoSenha', 'inputSenha')"></i>
+                    </div>
+                    <div class="containerInput">
+                        <input type="password" class="inputSenha" id="inputConfirma" required>
+                        <label class="labelLine">Confirme sua senha</label>
+                        <i class="bi bi-eye" id="olhoConfirma" onclick="mostrarSenha('olhoConfirma', 'inputConfirma')"></i>
+                    </div>
                 </div>
-                <div class="containerInput">
-                    <input type="text" class="input" required>
-                    <div class="labelLine">Digite seu RG</div>
+
+                <div class="linhaBotao">
+                    <span id="erroSenha" >A SENHA E SUA CONFIRMAÇÃO DEVEM SER IGUAIS</span>
+                    <button type="submit" onclick="senhaIgual('form', 'inputSenha', 'inputConfirma', 'erroSenha', event)" > CONFIRMAR</button>
                 </div>
-            </div>
-            <div class="caixaInputVertical">
-                <div class="containerVertical">
-                    <input type="password" class="inputV" id="inputSenha" placeholder="Digite sua senha" required>
-                    <i class="bi bi-eye" id="olhoSenha" onclick="mostrarSenha('olhoSenha', 'inputSenha')"></i>
-                </div>
-                <div class="containerVertical">
-                    <div class="containerInput vertical">
-                    <input type="password" class="inputV" id="inputConfirma" placeholder="Confirme sua senha" required>
-                    <i class="bi bi-eye" id="olhoConfirma" onclick="mostrarSenha('olhoConfirma', 'inputConfirma')"></i>
-                </div>
-                </div>
-            </div>
-            <div class="botaoSubmit">
-                <span id="erroSenha" >A SENHA E SUA CONFIRMAÇÃO DEVEM SER IGUAIS</span>
-                <button type="submit" onclick="senhaIgual('form', 'inputSenha', 'inputConfirma', 'erroSenha', event)" > CONFIRMAR</button>
-            </div>
         </form>
-    </div>
+    </main>
 </body>
 <script src="/public/js/index.js"></script>
 </html>

@@ -1,27 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body{
-    background-color: #632972;
+    font-family: "Inter", sans-serif;
+    background-color: #632972ef;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-.formulario{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 .container{
-    width: 70%;
-    height: fit-content;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 30px;
-    border: 3px solid black;
+    width: 90%;
+    /* height: fit-content; */
     background-color: #E8DBDB;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
 }
+
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:40%;
+    background-color: #632972;
+    border-radius: 8px 0 0 8px;
+    color: white;
+    padding: 1rem;
+}
+
+.formulario{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap:1rem;
+}
+
+form{
+    width: 100%;
+    height: fit-content;
+}
+
+.titulo{
+    width: 100%;
+    align-items: flex-start;
+}
+
+.linhaInput{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+.containerInput{
+    position: relative;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.containerInput.wideInput{
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    border: 2px solid #632972;
+    border-top-left-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    transition: 0.1s ease;
+}
+
+.input:focus + .labelLine,
+.input:valid + .labelLine,
+.inputSenha:focus + .labelLine,
+.inputSenha:valid + .labelLine,
+.containerInput input[type="date"]:valid + .labelLine 
+{ /* Fix para campos date preenchidos */
+    transform: translateY(-28px) translateX(-5px); /* Move para cima */
+    font-size: 0.75rem;
+    color: #632972;
+    z-index: 10;
+}
+
+#textarea:focus + .labelLine,
+#textarea:valid + .labelLine 
+{
+    transform: translateY(-28px) translateX(-5px); /* Mesma translação */
+    font-size: 0.75rem;
+    color: #632972;
+    z-index: 10;
+}
+
+.containerInput input[type="date"] 
+{
+    color: #444;
+    padding: 0.8rem 0.5rem;
+}
+
+.labelLine {
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    color: #444;
+    pointer-events: none;
+    transition: 0.3s ease;
+    padding: 0 5px;
+    transform: translateX(-80px);
+}
+
+#textarea{
+    width: 80%;
+    padding: 0.8rem 0.5rem;
+    border: 2px solid #632972;
+    border-top-left-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    transition: 0.1s ease;
+    resize: none;
+}
+
+.inputSenha{
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    border: 2px solid #632972;
+    border-top-left-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    transition: 0.1s ease;
+}
+
+.inputSenha:focus + .labelLine,
+.inputSenha:valid + .labelLine{
+    transform: translate(-95px , -40px);
+    z-index: 1111;
+}
+
+#olhoSenha, #olhoConfirma{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.linhaBotao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.linhaBotao button{
+    padding: 1rem 0.5rem;
+    border-radius: 8px;
+    background-color: #632972;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.linhaBotao button:hover{
+    background-color: #4b1d5e;
+}
+
+.linhaBotao span{
+    color: red;
+    margin-right: 1rem;
+    font-size: 12px;
+    display: none;
+}
+
+
+
+
+
+/* 
+
 
 .caixaInput{
     width: 100%;
@@ -39,15 +205,7 @@ body{
     justify-content: center;
 }
 
-.containerInput{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    line-height: 200px;
-}
+
 
 .containerVertical{
     width: 100%;
@@ -57,17 +215,7 @@ body{
     align-items: center;
 }
 
-.input{
-    width: 300px;
-    height: 50px;
-    border: 2px solid black;
-    border-top-left-radius: 10px;
-    background-color: rgba(248, 188, 194, 0.5);
-    position: absolute;
-    outline: none;
-    line-height: 200px;
-    transition: 0.1s ease;
-}
+
 
 .inputV{
     width: 300px;
@@ -87,21 +235,10 @@ body{
     line-height: 200px;
 }
 
-.labelLine {
-    position: absolute;
-    top: 0;
-    color: #444;
-    pointer-events: none;
-    transition: 0.3s ease;
-    transform: translateX(-80px);
-}
 
 
-.input:focus + .labelLine,
-.input:valid + .labelLine{
-    transform: translate(-95px , -40px);
-    z-index: 1111;
-}
+
+
 
 .botaoSubmit{
     width: 100%;
@@ -132,4 +269,4 @@ span{
     color: red;
     display: none;
     justify-self: center;
-}
+} */
