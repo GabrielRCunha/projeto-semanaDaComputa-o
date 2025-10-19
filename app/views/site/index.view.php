@@ -25,7 +25,7 @@
                         <label class="labelLine">Digite seu nome</label>
                     </div>
                     <div class="containerInput">
-                        <input type="date" class="input">
+                        <input type="date" class="input" required>
                     </div>
                 </div>
 
