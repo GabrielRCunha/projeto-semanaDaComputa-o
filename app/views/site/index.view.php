@@ -11,7 +11,7 @@
     <main class="container">
         <div class="apresentacao">
             <img src="" alt="Logo code">
-            <h2>Bem-vindo, faça seu cadastro em nosso sistema</h2>
+            <h2>Bem-vindo! Faça seu cadastro em nosso sistema</h2>
             <img src="" alt="Macacode">
         </div>
         <form class="formulario" action="" method="POST">   
