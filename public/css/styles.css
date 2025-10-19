@@ -29,14 +29,20 @@ body{
     background-color: #632972;
     border-radius: 8px 0 0 8px;
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
+}
+
+.apresentacao h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .formulario{
     width: 60%;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0rem 1rem;
     gap:1rem;
 }
 
@@ -48,6 +54,8 @@ form{
 .titulo{
     width: 100%;
     align-items: flex-start;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .linhaInput{
@@ -129,6 +137,7 @@ form{
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+    color: #450e53;
 }
 
 .linhaBotao{
@@ -146,10 +155,13 @@ form{
     color: white;
     border: none;
     cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Inter", sans-serif;
 }
 
 .linhaBotao button:hover{
     background-color: #4b1d5e;
+    scale: 1.02;
 }
 
 .linhaBotao span{
