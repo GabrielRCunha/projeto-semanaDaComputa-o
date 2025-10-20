@@ -79,5 +79,5 @@
         </form>
     </main>
 </body>
-<script src="/public/js/index.js"></script>
+<script src="/public/js/cadastro.js"></script>
 </html>
