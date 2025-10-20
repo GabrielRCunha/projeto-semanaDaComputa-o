@@ -6,3 +6,4 @@ use App\Core\Router;
 
 $router->get('cadastro', 'CadastroController@exibirCadastro');
 $router->post('cadastro', 'CadastroController@executaCadastro');
+$router->get('', 'CadastroController@login');

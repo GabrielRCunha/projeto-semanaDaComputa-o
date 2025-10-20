@@ -49,4 +49,8 @@ class CadastroController
         
         header('Location: /cadastro?sucesso=1');
     }
+
+    public function login(){
+        return view('site/login');
+    }
 }
