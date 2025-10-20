@@ -1,0 +1,82 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #632972ef;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 400px;
+    height: fit-content;
+    background-color: #E8DBDB;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho{
+    width: 100%;
+    height: fit-content;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: black;
+}
+
+img{
+    width: 400px;
+}
+
+.formulario{
+    margin-top: 10px;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input{
+    background-color: transparent;
+    width: 300px;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border: 2px solid #632972;
+    margin-bottom: 10px;
+}
+
+.bi{
+    align-self: flex-end;
+    margin-right: 5px;
+    transform: translateY(-33px);
+    cursor: pointer;
+}
+
+label{
+    display: block;
+    align-self: flex-start;
+    font-family: "Inter", sans-serif;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    align-self: flex-end;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #632972;
+    color: white;
+    cursor: pointer;
+}
