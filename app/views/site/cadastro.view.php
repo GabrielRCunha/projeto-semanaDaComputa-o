@@ -6,20 +6,26 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Curso Semana Computação</title>
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/cadastro.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <main class="container">
         <div class="apresentacao">
-            <img src="" alt="Logo code">
+            <img src="../../public/assets/code-logo.png" alt="Logo code" class="logo">
             <h2>Bem-vindo! Faça seu cadastro em nosso sistema</h2>
-            <img src="" alt="Macacode">
+            <img src="../../public/assets/macacode.png" alt="Macacode" class="macacode">
+            <form action="/logout" method="POST">
+                <button type="submit" class="botao-logout">
+                    Logout
+                </button>
+            </form>
+            
         </div>
         <form id="form" class="formulario" action="/cadastro" method="POST" enctype="multipart/form-data">   
                 <div class="titulo">
@@ -50,7 +56,7 @@
                 <div class="linhaInput">
                     <div class="containerInput">
                         <input type="text" name="cpf" class="input" required>
-                        <label class="labelLine">Insira seu cpf</label>
+                        <label class="labelLine">Insira seu CPF</label>
                     </div>
                     
                     <div class="containerInput">
@@ -84,12 +90,6 @@
                     <button type="submit" onclick="senhaIgual('form', 'inputSenha', 'inputConfirma', 'erroSenha', event)" > CONFIRMAR</button>
                 </div>
         </form>
-        <form action="/logout" method="POST">
-                <button type="submit" class="action-btn logout">
-                <span class="material-symbols-outlined">logout</span>
-                Sair
-                </button>
-            </form>
     </main>
 </body>
 <script src="/public/js/cadastro.js"></script>
