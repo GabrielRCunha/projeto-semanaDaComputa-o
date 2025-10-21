@@ -47,18 +47,21 @@ class QueryBuilder
     }
 
     public function verificaLogin($email, $senha){
-        $sql  = sprintf('Select * FROM usuarios Where email = :email AND senha = :senha');
+        // Busca apenas pelo email
+        $sql = 'SELECT * FROM usuarios WHERE email = :email';
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([
-                'email' => $email,  
-                'senha' => $senha
-            ]);
+            $stmt->execute(['email' => $email]);
 
             $user = $stmt->fetch(PDO::FETCH_OBJ);
 
-            return $user;
+            // Se encontrou o usuário, verifica a senha criptografada
+            if ($user && password_verify($senha, $user->senha)) {
+                return $user; // Login bem-sucedido
+            }
+
+            return false; // Email não existe ou senha incorreta
         }
         catch (Exception $e){
             die($e->getMessage());

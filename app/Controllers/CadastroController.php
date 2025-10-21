@@ -34,6 +34,8 @@ class CadastroController
         if(!preg_match($regexCPF, $cpf)) die("CPF inválido!");
         if(!preg_match($regexRG_final, $rg)) die("RG inválido!");
 
+        $senhaCriptografada = password_hash($_POST['senha'], PASSWORD_BCRYPT);
+
         $parametros = [
             'nome' => $nome,
             'data_nascimento' => $_POST['data_nascimento'],
@@ -42,7 +44,7 @@ class CadastroController
             'cpf' => $cpf,
             'rg' => $rg,
             'descricao' => $descricao,
-            'senha' => $_POST['senha'],
+            'senha' => $senhaCriptografada,
         ];
         
         App::get('database')->insert('usuarios', $parametros);
