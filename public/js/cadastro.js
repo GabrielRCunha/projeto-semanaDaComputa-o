@@ -49,8 +49,6 @@ function validarCampos(idErro){
 
     const regexNome = /^[A-Za-zÀ-ÿ\s]+$/;
     const regexEmail = /^[\w\.-]+@[\w\.-]+\.\w{2,}$/;
-    const regexTelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
-    const regexCPF = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
     const regexRG = /(?:^\d{1,2}\.?\d{3}\.?\d{3}-[\dXx]$|^\d{1,2}\.?\d{3}\.?\d{3}$)/;
 
     if(!regexNome.test(nome)){
@@ -68,18 +66,6 @@ function validarCampos(idErro){
     if(!regexEmail.test(email)){
         erro.style.display = "flex";
         erro.textContent = "Email inválido!";
-        return false;
-    }
-
-    if(!regexTelefone.test(telefone)){
-        erro.style.display = "flex";
-        erro.textContent = "Telefone inválido! Formato esperado: (11) 91234-5678 ou 11912345678";
-        return false;
-    }
-
-    if(!regexCPF.test(cpf)){
-        erro.style.display = "flex";
-        erro.textContent = "CPF inválido! Formato esperado: 000.000.000-00";
         return false;
     }
 

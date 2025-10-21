@@ -17,21 +17,17 @@ class CadastroController
     {
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
-        $cpf = $_POST['cpf'];
+        $telefone = "32999999999";
+        $cpf = "111.111.111-11";
         $rg = $_POST['rg'];
-        $descricao = $_POST['descricao'];
+        $descricao = "descrição teste";
 
         $regexNome = "/^[A-Za-zÀ-ÿ\s]+$/";
         $regexEmail = "/^[\w\.-]+@[\w\.-]+\.\w{2,}$/";
-        $regexTelefone = "/^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/";
-        $regexCPF = "/^\d{3}\.\d{3}\.\d{3}-\d{2}$/";
         $regexRG_final = "/(?:^\d{1,2}\.?\d{3}\.?\d{3}-[\dXx]$|^\d{1,2}\.?\d{3}\.?\d{3}$)/";
 
         if(!preg_match($regexNome, $nome)) die("Nome inválido!");
         if(!preg_match($regexEmail, $email)) die("Email inválido!");
-        if(!preg_match($regexTelefone, $telefone)) die("Telefone inválido!");
-        if(!preg_match($regexCPF, $cpf)) die("CPF inválido!");
         if(!preg_match($regexRG_final, $rg)) die("RG inválido!");
 
         $senhaCriptografada = password_hash($_POST['senha'], PASSWORD_BCRYPT);

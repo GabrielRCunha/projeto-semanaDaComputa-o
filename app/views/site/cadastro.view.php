@@ -49,14 +49,14 @@
                     </div>
 
                     <div class="containerInput">
-                        <input type="text" name="telefone" class="input" required>
+                        <input type="text" name="telefone" class="input">
                         <label class="labelLine">Digite seu telefone</label>
                     </div>
                 </div>
 
                 <div class="linhaInput">
                     <div class="containerInput">
-                        <input type="text" name="cpf" class="input" required>
+                        <input type="text" name="cpf" class="input">
                         <label class="labelLine">Insira seu CPF</label>
                     </div>
                     
@@ -68,7 +68,7 @@
 
                 <div class="linhaInput wideInput">
                     <div class="containerInput wideInput">
-                        <textarea  id="textarea" name="descricao" required></textarea>
+                        <textarea  id="textarea" name="descricao"></textarea>
                         <label class="labelLine">Insira a descrição</label>
                     </div>
                 </div>
@@ -93,5 +93,7 @@
         </form>
     </main>
 </body>
+
 <script src="/public/js/cadastro.js"></script>
+
 </html>
