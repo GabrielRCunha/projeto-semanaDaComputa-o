@@ -1,4 +1,4 @@
-# **Trainee 2025.1**
+# **Projeto Minicurso Semana da Computação**
 
 # **Nome do seu blog**
 
