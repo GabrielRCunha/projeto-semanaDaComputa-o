@@ -47,9 +47,10 @@
                         <input type="email" name="email" class="input" required>
                         <label class="labelLine">Digite seu email</label>
                     </div>
+
                     <div class="containerInput">
                         <input type="text" name="telefone" class="input" required>
-                        <label class="labelLine">Digite seu telefone</div>
+                        <label class="labelLine">Digite seu telefone</label>
                     </div>
                 </div>
 
