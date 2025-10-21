@@ -15,12 +15,19 @@
         <div class="cabecalho">
             <img src="/public/assets/code-logo.png" alt="">
         </div>
-        <form action="" class="formulario">
+        <form action="/login" class="formulario">
             <label for="email" style="display: block;">digite seu e-mail</label>
             <input type="email" name="email" class="input">
             <label for="senha">Digite sua senha</label>
             <input type="password" name="senha" class="input" id="inputSenha">
             <i class="bi bi-eye" id="olho" onclick="mostrarSenha('olho', 'inputSenha')"></i>
+            <p>
+                <?php 
+                    if(isset($_SESSION['mensagem-erro']))
+                    echo $_SESSION['mensagem-erro'];
+                    unset($_SESSION['mensagem-erro']);
+                ?>
+            </p>
             <button type="submit">Entrar</button>
         </form>
     </div>
