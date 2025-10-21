@@ -17,9 +17,15 @@
 <body>
     <main class="container">
         <div class="apresentacao">
-            <img src="" alt="Logo code">
+            <img src="../../public/assets/code-logo.png" alt="Logo code" class="logo">
             <h2>Bem-vindo! Faça seu cadastro em nosso sistema</h2>
-            <img src="" alt="Macacode">
+            <img src="../../public/assets/macacode.png" alt="Macacode" class="macacode">
+            <form action="/logout" method="POST">
+                <button type="submit" class="botao-logout">
+                    Logout
+                </button>
+            </form>
+            
         </div>
         <form id="form" class="formulario" action="/cadastro" method="POST" enctype="multipart/form-data">   
                 <div class="titulo">
@@ -50,7 +56,7 @@
                 <div class="linhaInput">
                     <div class="containerInput">
                         <input type="text" name="cpf" class="input" required>
-                        <label class="labelLine">Insira seu cpf</label>
+                        <label class="labelLine">Insira seu CPF</label>
                     </div>
                     
                     <div class="containerInput">

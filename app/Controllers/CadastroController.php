@@ -26,13 +26,13 @@ class CadastroController
         $regexEmail = "/^[\w\.-]+@[\w\.-]+\.\w{2,}$/";
         $regexTelefone = "/^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/";
         $regexCPF = "/^\d{3}\.\d{3}\.\d{3}-\d{2}$/";
-        $regexRG = "/^\d{1,2}\.?\d{3}\.?\d{3}-[\dXx]$/";
+        $regexRG_final = "/(?:^\d{1,2}\.?\d{3}\.?\d{3}-[\dXx]$|^\d{1,2}\.?\d{3}\.?\d{3}$)/";
 
         if(!preg_match($regexNome, $nome)) die("Nome inválido!");
         if(!preg_match($regexEmail, $email)) die("Email inválido!");
         if(!preg_match($regexTelefone, $telefone)) die("Telefone inválido!");
         if(!preg_match($regexCPF, $cpf)) die("CPF inválido!");
-        if(!preg_match($regexRG, $rg)) die("RG inválido!");
+        if(!preg_match($regexRG_final, $rg)) die("RG inválido!");
 
         $parametros = [
             'nome' => $nome,

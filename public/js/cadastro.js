@@ -51,7 +51,7 @@ function validarCampos(idErro){
     const regexEmail = /^[\w\.-]+@[\w\.-]+\.\w{2,}$/;
     const regexTelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
     const regexCPF = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-    const regexRG = /^\d{1,2}\.?\d{3}\.?\d{3}-[\dXx]$/;
+    const regexRG = /(?:^\d{1,2}\.?\d{3}\.?\d{3}-[\dXx]$|^\d{1,2}\.?\d{3}\.?\d{3}$)/;
 
     if(!regexNome.test(nome)){
         erro.style.display = "flex";
@@ -85,7 +85,7 @@ function validarCampos(idErro){
 
     if(!regexRG.test(rg)){
         erro.style.display = "flex";
-        erro.textContent = "RG inválido! Formato esperado: 12.345.678-X ou 12345678-X";
+        erro.textContent = "RG inválido! Formato esperado: 12.345.678-X ou 12345678-X ou 12.345.678";
         return false;
     }
 

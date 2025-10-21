@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="/public/css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,12 @@
             <img src="/public/assets/code-logo.png" alt="">
         </div>
         <form action="/login" class="formulario" method="POST">
-            <label for="email" style="display: block;">digite seu e-mail</label>
+            <label for="email" style="display: block;">Digite seu e-mail</label>
             <input type="email" name="email" class="input">
             <label for="senha">Digite sua senha</label>
             <input type="password" name="senha" class="input" id="inputSenha">
             <i class="bi bi-eye" id="olho" onclick="mostrarSenha('olho', 'inputSenha')"></i>
-            <p>
+            <p class="erro">
                 <?php 
                     if(isset($_SESSION['mensagem-erro']))
                     echo $_SESSION['mensagem-erro'];
