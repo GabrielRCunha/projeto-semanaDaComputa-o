@@ -42,12 +42,11 @@ class CadastroController
             'cpf' => $cpf,
             'rg' => $rg,
             'descricao' => $descricao,
-            'senha' => $_POST['senha'],
+            'senha' => $_POST['senha']
         ];
         
         App::get('database')->insert('usuarios', $parametros);
         
         header('Location: /cadastro?sucesso=1');
-    }
-
+    } 
 }
