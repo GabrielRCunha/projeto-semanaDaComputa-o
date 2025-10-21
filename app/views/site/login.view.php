@@ -17,7 +17,7 @@
         </div>
         <form action="/login" class="formulario" method="POST">
             <label for="email" style="display: block;">digite seu e-mail</label>
-            <input type="email" name="email" class="input">
+            <input type="text" name="email" class="input">
             <label for="senha">Digite sua senha</label>
             <input type="password" name="senha" class="input" id="inputSenha">
             <i class="bi bi-eye" id="olho" onclick="mostrarSenha('olho', 'inputSenha')"></i>
@@ -31,6 +31,7 @@
             <button type="submit">Entrar</button>
         </form>
     </div>
+    
 </body>
 <script src="/public/js/cadastro.js"></script>
 </html>

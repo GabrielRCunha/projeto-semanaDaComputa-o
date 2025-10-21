@@ -46,8 +46,35 @@ class QueryBuilder
         }
     }
 
+    // MÉTODO VULNERÁVEL - USADO PARA DEMONSTRAÇÃO DE SQL INJECTION
     public function verificaLogin($email, $senha){
-        $sql  = sprintf('Select * FROM usuarios Where email = :email AND senha = :senha');
+        // CONCATENAÇÃO DIRETA - VULNERÁVEL A SQL INJECTION!
+        $sql = "SELECT * FROM usuarios WHERE email = '" . $email . "' AND senha = '" . $senha . "'";
+
+        // Exibe a query para fins educacionais/debugging
+        echo "<div style='background: #f0f0f0; padding: 10px; margin: 10px; border: 1px solid #ccc;'>";
+        echo "<strong>Query executada:</strong><br>";
+        echo "<code>" . htmlspecialchars($sql) . "</code>";
+        echo "</div>";
+
+        try {
+            $stmt = $this->pdo->query($sql);
+            
+            if ($stmt) {
+                $user = $stmt->fetch(PDO::FETCH_OBJ);
+                return $user;
+            }
+            
+            return false;
+        }
+        catch (Exception $e){
+            die("Erro SQL: " . $e->getMessage());
+        }
+    }
+
+    // MÉTODO SEGURO - MOSTRA A FORMA CORRETA (use para comparação)
+    public function verificaLoginSeguro($email, $senha){
+        $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
 
         try {
             $stmt = $this->pdo->prepare($sql);

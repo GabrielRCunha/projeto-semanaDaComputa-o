@@ -84,6 +84,12 @@
                     <button type="submit" onclick="senhaIgual('form', 'inputSenha', 'inputConfirma', 'erroSenha', event)" > CONFIRMAR</button>
                 </div>
         </form>
+        <form action="/logout" method="POST">
+                <button type="submit" class="action-btn logout">
+                <span class="material-symbols-outlined">logout</span>
+                Sair
+                </button>
+            </form>
     </main>
 </body>
 <script src="/public/js/cadastro.js"></script>
