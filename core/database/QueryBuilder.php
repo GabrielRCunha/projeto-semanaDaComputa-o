@@ -52,7 +52,7 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
-                'email' => $email,
+                'email' => $email,  
                 'senha' => $senha
             ]);
 

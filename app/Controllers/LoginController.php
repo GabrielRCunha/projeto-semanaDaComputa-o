@@ -30,7 +30,7 @@ class LoginController {
         }
         else {
             session_start();
-            $_SESSION['mesnagem-erro'] = "Email e/ou senha incorretos";
+            $_SESSION['mensagem-erro'] = "Email e/ou senha incorretos";
             header('Location: /login');
         }
     }

@@ -15,7 +15,7 @@
         <div class="cabecalho">
             <img src="/public/assets/code-logo.png" alt="">
         </div>
-        <form action="/login" class="formulario">
+        <form action="/login" class="formulario" method="POST">
             <label for="email" style="display: block;">digite seu e-mail</label>
             <input type="email" name="email" class="input">
             <label for="senha">Digite sua senha</label>
